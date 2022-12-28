@@ -1,0 +1,22 @@
+from time import sleep
+def contador(a, b, x):
+    print('=-'*20)
+    print(f'Contagem de {a} até {b} de {x} em {x}')
+    if a <= b:
+        for c in range(a, b+1, x):
+            sleep(0.5)
+            print(f'{c} ', end='', flush=True)
+    else:
+        for c in range(a, b-1, -abs(x)):
+            sleep(0.5)
+            print(f'{c} ', end='', flush=True)
+    print('FIM!')
+
+
+contador(1, 10, 1)
+contador(10, 0, 2)
+print('=-'*20)
+inicio = int(input('Início: '))
+fim = int(input('Fim: '))
+passo = int(input('Passo: '))
+contador(inicio, fim, passo)
